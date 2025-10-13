@@ -1,0 +1,46 @@
+# Custom hyperparameters for solar flare detection (1-class HARP h5 dataset)
+
+# Learning rate settings
+lr0: 0.0001           # iniziale
+lrf: 0.1             # finale (con OneCycle)
+momentum: 0.9
+weight_decay: 0.0001  # più basso per stabilità iniziale
+
+# Warmup
+warmup_epochs: 3.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Loss gains (ridotti per evitare NaN)
+box: 0.05            # meno aggressivo
+cls: 0.3
+cls_pw: 1.0
+obj: 0.3             # minore attenzione al background
+obj_pw: 1.0
+
+# IoU & anchor
+iou_t: 0.2           # threshold ridotto per match
+anchor_t: 4.0
+fl_gamma: 0.0        # no focal loss
+
+# Augmentation
+hsv_h: 0.0
+hsv_s: 0.0
+hsv_v: 0.0
+degrees: 0.0
+translate: 0.05
+scale: 0.3           # meno aggressivo
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.0
+
+# Mosaic / Mixup
+mosaic: 0.0          # meglio disattivarlo all’inizio
+mixup: 0.0
+copy_paste: 0.0
+paste_in: 0.0
+
+# Other
+loss_ota: 1
+label_smoothing: 0.0

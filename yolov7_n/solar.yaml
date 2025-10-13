@@ -1,0 +1,7 @@
+train: /projects/data/physics/data/Train
+val: /projects/data/physics/data/Validation
+
+is_h5: True
+
+nc: 1
+names: [ 'HARP' ]

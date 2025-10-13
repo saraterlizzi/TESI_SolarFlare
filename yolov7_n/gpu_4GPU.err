@@ -1,0 +1,156 @@
+WARNING:torch.distributed.run:
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
+YOLOR 🚀 2025-9-24 torch 1.13.1+cu116 CUDA:0 (Tesla V100-SXM2-32GB, 32510.5MB)
+                                     CUDA:1 (Tesla V100-SXM2-32GB, 32510.5MB)
+                                     CUDA:2 (Tesla V100-SXM2-32GB, 32510.5MB)
+                                     CUDA:3 (Tesla V100-SXM2-32GB, 32510.5MB)
+
+Added key: store_based_barrier_key:1 to store for rank: 0
+Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 4 nodes.
+Namespace(weights='', cfg='cfg/training/yolov7.yaml', data='solar.yaml', hyp='hyp.yaml', epochs=300, batch_size=16, img_size=[640, 640], rect=False, resume=False, nosave=False, notest=False, noautoanchor=False, evolve=False, bucket='', cache_images=False, image_weights=False, device='', multi_scale=False, single_cls=False, adam=False, sync_bn=True, local_rank=0, workers=4, project='runs/train', entity=None, name='yolov7_h_custom_4GPU', exist_ok=False, quad=False, linear_lr=False, label_smoothing=0.0, upload_dataset=False, bbox_interval=-1, save_period=-1, artifact_alias='latest', freeze=[0], v5_metric=False, world_size=4, global_rank=0, save_dir='runs/train/yolov7_h_custom_4GPU2', total_batch_size=64)
+[34m[1mtensorboard: [0mStart with 'tensorboard --logdir runs/train', view at http://localhost:6006/
+[34m[1mhyperparameters: [0mlr0=0.0001, lrf=0.1, momentum=0.9, weight_decay=0.0001, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=0.05, cls=0.3, cls_pw=1.0, obj=0.3, obj_pw=1.0, iou_t=0.2, anchor_t=4.0, fl_gamma=0.0, hsv_h=0.0, hsv_s=0.0, hsv_v=0.0, degrees=0.0, translate=0.05, scale=0.3, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.0, mosaic=0.0, mixup=0.0, copy_paste=0.0, paste_in=0.0, loss_ota=1, label_smoothing=0.0
+Overriding model.yaml nc=80 with nc=1
+
+                 from  n    params  module                                  arguments                     
+  0                -1  1       928  models.common.Conv                      [3, 32, 3, 1]                 
+  1                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]                
+  2                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+  3                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]               
+  4                -1  1      8320  models.common.Conv                      [128, 64, 1, 1]               
+  5                -2  1      8320  models.common.Conv                      [128, 64, 1, 1]               
+  6                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+  7                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+  8                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+  9                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+ 10  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 11                -1  1     66048  models.common.Conv                      [256, 256, 1, 1]              
+ 12                -1  1         0  models.common.MP                        []                            
+ 13                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 14                -3  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 15                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]              
+ 16          [-1, -3]  1         0  models.common.Concat                    [1]                           
+ 17                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 18                -2  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 19                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 20                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 21                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 22                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 23  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 24                -1  1    263168  models.common.Conv                      [512, 512, 1, 1]              
+ 25                -1  1         0  models.common.MP                        []                            
+ 26                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 27                -3  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 28                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]              
+ 29          [-1, -3]  1         0  models.common.Concat                    [1]                           
+ 30                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 31                -2  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 32                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 33                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 34                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 35                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 36  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 37                -1  1   1050624  models.common.Conv                      [1024, 1024, 1, 1]            
+ 38                -1  1         0  models.common.MP                        []                            
+ 39                -1  1    525312  models.common.Conv                      [1024, 512, 1, 1]             
+ 40                -3  1    525312  models.common.Conv                      [1024, 512, 1, 1]             
+ 41                -1  1   2360320  models.common.Conv                      [512, 512, 3, 2]              
+ 42          [-1, -3]  1         0  models.common.Concat                    [1]                           
+ 43                -1  1    262656  models.common.Conv                      [1024, 256, 1, 1]             
+ 44                -2  1    262656  models.common.Conv                      [1024, 256, 1, 1]             
+ 45                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 46                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 47                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 48                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 49  [-1, -3, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 50                -1  1   1050624  models.common.Conv                      [1024, 1024, 1, 1]            
+ 51                -1  1   7609344  models.common.SPPCSPC                   [1024, 512, 1]                
+ 52                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 53                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 54                37  1    262656  models.common.Conv                      [1024, 256, 1, 1]             
+ 55          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 56                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 57                -2  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 58                -1  1    295168  models.common.Conv                      [256, 128, 3, 1]              
+ 59                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 60                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 61                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 62[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 63                -1  1    262656  models.common.Conv                      [1024, 256, 1, 1]             
+ 64                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 65                -1  1         0  torch.nn.modules.upsampling.Upsample    [None, 2, 'nearest']          
+ 66                24  1     65792  models.common.Conv                      [512, 128, 1, 1]              
+ 67          [-1, -2]  1         0  models.common.Concat                    [1]                           
+ 68                -1  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 69                -2  1     33024  models.common.Conv                      [256, 128, 1, 1]              
+ 70                -1  1     73856  models.common.Conv                      [128, 64, 3, 1]               
+ 71                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+ 72                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+ 73                -1  1     36992  models.common.Conv                      [64, 64, 3, 1]                
+ 74[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 75                -1  1     65792  models.common.Conv                      [512, 128, 1, 1]              
+ 76                -1  1         0  models.common.MP                        []                            
+ 77                -1  1     16640  models.common.Conv                      [128, 128, 1, 1]              
+ 78                -3  1     16640  models.common.Conv                      [128, 128, 1, 1]              
+ 79                -1  1    147712  models.common.Conv                      [128, 128, 3, 2]              
+ 80      [-1, -3, 63]  1         0  models.common.Concat                    [1]                           
+ 81                -1  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 82                -2  1    131584  models.common.Conv                      [512, 256, 1, 1]              
+ 83                -1  1    295168  models.common.Conv                      [256, 128, 3, 1]              
+ 84                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 85                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 86                -1  1    147712  models.common.Conv                      [128, 128, 3, 1]              
+ 87[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]                           
+ 88                -1  1    262656  models.common.Conv                      [1024, 256, 1, 1]             
+ 89                -1  1         0  models.common.MP                        []                            
+ 90                -1  1     66048  models.common.Conv                      [256, 256, 1, 1]              
+ 91                -3  1     66048  models.common.Conv                      [256, 256, 1, 1]              
+ 92                -1  1    590336  models.common.Conv                      [256, 256, 3, 2]              
+ 93      [-1, -3, 51]  1         0  models.common.Concat                    [1]                           
+ 94                -1  1    525312  models.common.Conv                      [1024, 512, 1, 1]             
+ 95                -2  1    525312  models.common.Conv                      [1024, 512, 1, 1]             
+ 96                -1  1   1180160  models.common.Conv                      [512, 256, 3, 1]              
+ 97                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 98                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+ 99                -1  1    590336  models.common.Conv                      [256, 256, 3, 1]              
+100[-1, -2, -3, -4, -5, -6]  1         0  models.common.Concat                    [1]                           
+101                -1  1   1049600  models.common.Conv                      [2048, 512, 1, 1]             
+102                75  1    328704  models.common.RepConv                   [128, 256, 3, 1]              
+103                88  1   1312768  models.common.RepConv                   [256, 512, 3, 1]              
+104               101  1   5246976  models.common.RepConv                   [512, 1024, 3, 1]             
+105   [102, 103, 104]  1     34156  models.yolo.IDetect                     [1, [[12, 16, 19, 36, 40, 28], [36, 75, 76, 55, 72, 146], [142, 110, 192, 243, 459, 401]], [256, 512, 1024]]
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/functional.py:504: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3190.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Model Summary: 415 layers, 37196556 parameters, 37196556 gradients, 105.1 GFLOPS
+
+Scaled weight_decay = 0.0001
+Optimizer groups: 95 .bias, 95 conv.weight, 98 other
+Using SyncBatchNorm()
+Utilizzo del DataLoader custom per dataset .h5
+Utilizzo del DataLoader custom per dataset .h5
+/home/s.terlizzi/SolarFlare/yolov7_n/utils/autoanchor.py:28: RuntimeWarning: invalid value encountered in divide
+  shapes = imgsz * dataset.shapes / dataset.shapes.max(1, keepdims=True)
+Image sizes 640 train, 640 test
+Using 4 dataloader workers
+Logging results to runs/train/yolov7_h_custom_4GPU2
+Starting training for 300 epochs...
+
+     Epoch   gpu_mem       box       obj       cls     total    labels  img_size
+  0%|          | 0/1273 [00:00<?, ?it/s]/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+/home/s.terlizzi/miniconda3/envs/SolarFlare/lib/python3.10/site-packages/torch/distributed/distributed_c10d.py:2387: UserWarning: torch.distributed._all_gather_base is a private function and will be deprecated. Please use torch.distributed.all_gather_into_tensor instead.
+  warnings.warn(
+     0/299     12.1G   0.08178   0.01214         0   0.09392       148       640:   0%|          | 0/1273 [00:52<?, ?it/s]     0/299     12.1G   0.08178   0.01214         0   0.09392       148       640:   0%|          | 1/1273 [00:52<18:24:42, 52.11s/it]Reducer buckets have been rebuilt in this iteration.
+     0/299     12.1G   0.08177   0.01225         0   0.09402       177       640:   0%|          | 1/1273 [00:52<18:24:42, 52.11s/it]     0/299     12.1G   0.08177   0.01225         0   0.09402       177       640:   0%|          | 2/1273 [00:52<7:43:18, 21.87s/it]      0/299     12.1G   0.08205   0.01243         0   0.09448       165       640:   0%|          | 2/1273 [00:53<7:43:18, 21.87s/it]     0/299     12.1G   0.08205   0.01243         0   0.09448       165       640:   0%|          | 3/1273 [00:53<4:17:21, 12.16s/it]     0/299     12.1G   0.08175   0.01239         0   0.09414       169       640:   0%|          | 3/1273 [00:53<4:17:21, 12.16s/it]     0/299     12.1G   0.08175   0.01239         0   0.09414       169       640:   0%|          | 4/1273 [00:53<2:40:20,  7.58s/it]     0/299     12.1G   0.08243   0.01241         0   0.09484       174       640:   0%|          | 4/1273 [00:59<2:40:20,  7.58s/it]     0/299     12.1G   0.08243   0.01241         0   0.09484       174       640:   0%|          | 5/1273 [00:59<2:22:31,  6.74s/it]     0/299     12.1G   0.08225   0.01243         0   0.09468       190       640:   0%|          | 5/1273 [00:59<2:22:31,  6.74s/it]     0/299     12.1G   0.08225   0.01243         0   0.09468       190       640:   0%|          | 6/1273 [00:59<1:38:03,  4.64s/it]     0/299     12.1G   0.08227   0.01226         0   0.09453       150       640:   0%|          | 6/1273 [01:00<1:38:03,  4.64s/it]     0/299     12.1G   0.08227   0.01226         0   0.09453       150       640:   1%|          | 7/1273 [01:00<1:12:56,  3.46s/it]     0/299     12.1G   0.08218    0.0121         0   0.09428       139       640:   1%|          | 7/1273 [01:01<1:12:56,  3.46s/it]     0/299     12.1G   0.08218    0.0121         0   0.09428       139       640:   1%|          | 8/1273 [01:01<53:42,  2.55s/it]       0/299     12.1G   0.08213   0.01212         0   0.09425       178       640:   1%|          | 8/1273 [01:27<53:42,  2.55s/it]     0/299     12.1G   0.08213   0.01212         0   0.09425       178       640:   1%|          | 9/1273 [01:27<3:25:57,  9.78s/it]     0/299     12.1G   0.08215   0.01216         0   0.09431       174       640:   1%|          | 9/1273 [01:27<3:25:57,  9.78s/it]     0/299     12.1G   0.08215   0.01216         0   0.09431       174       640:   1%|          | 10/1273 [01:27<2:26:22,  6.95s/it]     0/299     12.1G   0.08209   0.01208         0   0.09418       151       640:   1%|          | 10/1273 [01:29<2:26:22,  6.95s/it]     0/299     12.1G   0.08209   0.01208         0   0.09418       151       640:   1%|          | 11/1273 [01:29<1:49:54,  5.23s/it]     0/299     12.1G   0.08195   0.01192         0   0.09387       129       640:   1%|          | 11/1273 [01:29<1:49:54,  5.23s/it]     0/299     12.1G   0.08195   0.01192         0   0.09387       129       640:   1%|          | 12/1273 [01:29<1:19:42,  3.79s/it]     0/299     12.1G   0.08199   0.01189         0   0.09388       150       640:   1%|          | 12/1273 [01:56<1:19:42,  3.79s/it]     0/299     12.1G   0.08199   0.01189         0   0.09388       150       640:   1%|          | 13/1273 [01:56<3:46:47, 10.80s/it]     0/299     12.1G   0.08172   0.01193         0   0.09365       172       640:   1%|          | 13/1273 [01:57<3:46:47, 10.80s/it]     0/299     12.1G   0.08172   0.01193         0   0.09365       172       640:   1%|          | 14/1273 [01:57<2:41:35,  7.70s/it]     0/299     12.1G   0.08148   0.01208         0   0.09356       209       640:   1%|          | 14/1273 [01:58<2:41:35,  7.70s/it]     0/299     12.1G   0.08148   0.01208         0   0.09356       209       640:   1%|          | 15/1273 [01:58<2:00:25,  5.74s/it]     0/299     12.1G   0.08111   0.01212         0   0.09323       176       640:   1%|          | 15/1273 [01:58<2:00:25,  5.74s/it]     0/299     12.1G   0.08111   0.01212         0   0.09323       176       640:   1%|▏         | 16/1273 [01:58<1:27:21,  4.17s/it]     0/299     12.1G   0.08096   0.01213         0   0.09309       175       640:   1%|▏         | 16/1273 [02:22<1:27:21,  4.17s/it]     0/299     12.1G   0.08096   0.01213         0   0.09309       175       640:   1%|▏         | 17/1273 [02:22<3:30:10, 10.04s/it]     0/299     12.1G   0.08082   0.01223         0   0.09304       197       640:   1%|▏         | 17/1273 [02:22<3:30:10, 10.04s/it]     0/299     12.1G   0.08082   0.01223         0   0.09304       197       640:   1%|▏         | 18/1273 [02:22<2:29:59,  7.17s/it]     0/299     12.1G   0.08082   0.01222         0   0.09304       186       640:   1%|▏         | 18/1273 [02:27<2:29:59,  7.17s/it]     0/299     12.1G   0.08082   0.01222         0   0.09304       186       640:   1%|▏         | 19/1273 [02:27<2:14:27,  6.43s/it]     0/299     12.1G   0.08066   0.01214         0   0.09281       143       640:   1%|▏         | 19/1273 [02:28<2:14:27,  6.43s/it]     0/299     12.1G   0.08066   0.01214         0   0.09281       143       640:   2%|▏         | 20/1273 [02:28<1:36:57,  4.64s/it]     0/299     12.1G    0.0807   0.01211         0   0.09281       171       640:   2%|▏         | 20/1273 [02:49<1:36:57,  4.64s/it]     0/299     12.1G    0.0807   0.01211         0   0.09281       171       640:   2%|▏         | 21/1273 [02:49<3:23:23,  9.75s/it]     0/299     12.1G   0.08063   0.01208         0   0.09271       155       640:   2%|▏         | 21/1273 [02:50<3:23:23,  9.75s/it]     0/299     12.1G   0.08063   0.01208         0   0.09271       155       640:   2%|▏         | 22/1273 [02:50<2:25:15,  6.97s/it]     0/299     12.1G   0.08049   0.01203         0   0.09252       153       640:   2%|▏         | 22/1273 [02:56<2:25:15,  6.97s/it]     0/299     12.1G   0.08049   0.01203         0   0.09252       153       640:   2%|▏         | 23/1273 [02:56<2:18:18,  6.64s/it]     0/299     12.1G   0.08043   0.01201         0   0.09243       176       640:   2%|▏         | 23/1273 [02:56<2:18:18,  6.64s/it]     0/299     12.1G   0.08043   0.01201         0   0.09243       176       640:   2%|▏         | 24/1273 [02:56<1:39:42,  4.79s/it]     0/299     12.1G   0.08041   0.01197         0   0.09238       159       640:   2%|▏         | 24/1273 [04:31<1:39:42,  4.79s/it]     0/299     12.1G   0.08041   0.01197         0   0.09238       159       640:   2%|▏         | 25/1273 [04:31<10:59:50, 31.72s/it]     0/299     12.1G   0.08042   0.01194         0   0.09237       169       640:   2%|▏         | 25/1273 [04:31<10:59:50, 31.72s/it]     0/299     12.1G   0.08042   0.01194         0   0.09237       169       640:   2%|▏         | 26/1273 [04:31<7:44:37, 22.36s/it]      0/299     12.1G   0.08026   0.01188         0   0.09213       135       640:   2%|▏         | 26/1273 [04:32<7:44:37, 22.36s/it]     0/299     12.1G   0.08026   0.01188         0   0.09213       135       640:   2%|▏         | 27/1273 [04:32<5:27:43, 15.78s/it]     0/299     12.1G   0.08032    0.0118         0   0.09212       149       640:   2%|▏         | 27/1273 [04:38<5:27:43, 15.78s/it]     0/299     12.1G   0.08032    0.0118         0   0.09212       149       640:   2%|▏         | 28/1273 [04:38<4:27:08, 12.87s/it]     0/299     12.1G   0.08027   0.01177         0   0.09204       173       640:   2%|▏         | 28/1273 [06:25<4:27:08, 12.87s/it]     0/299     12.1G   0.08027   0.01177         0   0.09204       173       640:   2%|▏         | 29/1273 [06:25<14:13:40, 41.17s/it]     0/299     12.1G   0.08026   0.01169         0   0.09195       135       640:   2%|▏         | 29/1273 [06:25<14:13:40, 41.17s/it]     0/299     12.1G   0.08026   0.01169         0   0.09195       135       640:   2%|▏         | 30/1273 [06:25<9:59:52, 28.96s/it]      0/299     12.1G   0.08017   0.01166         0   0.09183       162       640:   2%|▏         | 30/1273 [06:26<9:59:52, 28.96s/it]     0/299     12.1G   0.08017   0.01166         0   0.09183       162       640:   2%|▏         | 31/1273 [06:26<7:02:16, 20.40s/it]     0/299     12.1G   0.08003   0.01165         0   0.09168       155       640:   2%|▏         | 31/1273 [06:30<7:02:16, 20.40s/it]     0/299     12.1G   0.08003   0.01165         0   0.09168       155       640:   3%|▎         | 32/1273 [06:30<5:21:48, 15.56s/it]     0/299     12.1G   0.08001   0.01161         0   0.09162       171       640:   3%|▎         | 32/1273 [08:54<5:21:48, 15.56s/it]     0/299     12.1G   0.08001   0.01161         0   0.09162       171       640:   3%|▎         | 33/1273 [08:54<18:36:14, 54.01s/it]     0/299     12.1G   0.08003   0.01155         0   0.09158       150       640:   3%|▎         | 33/1273 [08:54<18:36:14, 54.01s/it]     0/299     12.1G   0.08003   0.01155         0   0.09158       150       640:   3%|▎         | 34/1273 [08:54<13:03:44, 37.95s/it]     0/299     12.1G      0.08   0.01153         0   0.09153       166       640:   3%|▎         | 34/1273 [08:55<13:03:44, 37.95s/it]     0/299     12.1G      0.08   0.01153         0   0.09153       166       640:   3%|▎         | 35/1273 [08:55<9:10:50, 26.70s/it]      0/299     12.1G   0.08004   0.01151         0   0.09155       168       640:   3%|▎         | 35/1273 [08:59<9:10:50, 26.70s/it]     0/299     12.1G   0.08004   0.01151         0   0.09155       168       640:   3%|▎         | 36/1273 [08:59<6:53:25, 20.05s/it]slurmstepd: error: *** JOB 358801 ON gnode03 CANCELLED AT 2025-10-08T15:51:25 ***

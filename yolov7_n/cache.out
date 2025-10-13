@@ -1,0 +1,51 @@
+Job iniziato in data: Wed Oct  8 12:38:05 CEST 2025
+--- Inizio Script di Creazione Cache ---
+
+Avvio creazione cache per il set di TRAINING in: /projects/data/physics/data/Train
+Cache non trovata. Creazione della cache per 'Train' (lento solo la prima volta)...
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2011-06-09_22-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-02-16_23-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-02-17_00-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-03-04_05-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-03-04_06-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-03-14_03-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-09-03_13-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2012-09-03_13-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2013-03-12_00-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2013-07-13_23-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2014-02-18_15-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2014-02-26_16-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2014-06-21_10-36-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2015-07-25_10-36-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2015-07-31_03-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2015-08-02_04-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2016-08-15_21-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2016-08-22_18-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2016-08-26_12-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2017-06-08_12-36-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2017-06-08_12-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2017-06-24_08-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2018-06-12_13-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2018-06-12_13-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2019-03-22_05-48-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2019-03-22_06-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2019-04-02_20-36-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2019-04-10_13-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Train/hmi_magnetogram_2019-04-19_17-00-00.h5: Unable to synchronously open file (bad object header version number)
+Salvataggio della cache in '/projects/data/physics/data/Train'...
+Cache creata. I prossimi avvii saranno istantanei.
+
+Avvio creazione cache per il set di VALIDATION in: /projects/data/physics/data/Validation
+Cache non trovata. Creazione della cache per 'Validation' (lento solo la prima volta)...
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2011-08-26_14-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2011-08-26_14-24-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2014-04-10_09-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2015-09-07_23-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2015-09-07_23-12-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2017-07-27_08-00-00.h5: Unable to synchronously open file (bad object header version number)
+Errore grave durante la lettura del file /projects/data/physics/data/Validation/hmi_magnetogram_2017-07-27_08-12-00.h5: Unable to synchronously open file (bad object header version number)
+Salvataggio della cache in '/projects/data/physics/data/Validation'...
+Cache creata. I prossimi avvii saranno istantanei.
+
+--- Creazione Cache Completata con Successo! ---
+Job terminato in data: Wed Oct  8 13:16:03 CEST 2025
